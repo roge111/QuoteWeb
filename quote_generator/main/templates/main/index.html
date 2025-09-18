@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/static/main/css/index.css">
+</head>
+<body>
+    
+    <h1>Случайная цитата</h1>
+    <p>"{{ quote }}"</p>
+    <p> "Количество просомтров: {{ count_watch }}"</p>
+    
+    
+
+    {% if request.session.is_authenticated %}
+        <p>Добро пожаловать, {{ request.session.login }}!</p>
+        
+        {% if quote_id %}
+            <form action="{% url 'like_quote' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="quote_id" value="{{ quote_id }}">
+                
+                {% if has_like %}
+                    <button type="submit" style="color: red;">❤️ Убрать лайк</button>
+                {% else %}
+                    <button type="submit">👍 Поставить лайк</button>
+                {% endif %}
+            </form>
+
+            <form action="{% url 'dislike_quote' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="quote_id" value="{{ quote_id }}">
+
+                {% if has_dislike %}
+                    <button type="submit">Убрать дизлайк</button>
+                {% else %}
+                    <button>Поставить дизлайк</button>
+                {% endif %}
+            </form>
+
+
+            
+
+            
+        {% endif %}
+        <a href="{% url 'logout' %}">
+                <button>Выйти из аккаунта</button>
+        </a>
+        <br><br>
+        <a href="{% url 'add_quote' %}">
+            <button>Добавить цитату</button>
+        </a>
+        <a href="{% url 'top_quotes' %}">
+            <button>Топ цитат</button>
+        </a>
+    
+    {% else %}
+        <a href="{% url 'register' %}">
+            <button>Регистрация</button>
+        </a>
+        <a href="{% url 'logIn' %}">
+            <button>Войти</button>
+        </a>
+    {% endif %}
+
+    
+</body>
+</html>

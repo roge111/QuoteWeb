@@ -1,0 +1,161 @@
+/* index.css */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    
+    /* Фоновое изображение в тему книг */
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1590&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    /* Полупрозрачный overlay для улучшения читаемости */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0.9);
+    z-index: -1;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+p {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Стили для цитаты */
+.quote-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    backdrop-filter: blur(5px);
+}
+
+.quote-text {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: rgba(52, 152, 219, 0.9);
+    color: white;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: rgba(41, 128, 185, 0.95);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background-color: rgba(39, 174, 96, 0.9);
+    color: white;
+    border-color: #27ae60;
+}
+
+.btn-success:hover {
+    background-color: rgba(34, 153, 84, 0.95);
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: rgba(231, 76, 60, 0.9);
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+    background-color: rgba(192, 57, 43, 0.95);
+    transform: translateY(-2px);
+}
+
+/* Форма лайка */
+.like-form {
+    margin: 20px 0;
+}
+
+/* Отладочная информация */
+.debug-info {
+    background-color: rgba(248, 249, 250, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+    backdrop-filter: blur(5px);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+    
+    .quote-container {
+        padding: 20px;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    body::before {
+        background: rgba(255, 254, 254, 0.405);
+    }
+}
+
+/* Дополнительные стили для улучшения визуала */
+.quote-text::before {
+    content: '"';
+    font-size: 2em;
+    color: #3498db;
+    margin-right: 5px;
+}
+
+.quote-text::after {
+    content: '"';
+    font-size: 2em;
+    color: #3498db;
+    margin-left: 5px;
+}

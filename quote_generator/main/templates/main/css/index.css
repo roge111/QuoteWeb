@@ -1,0 +1,109 @@
+/* index.css */
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Стили для цитаты */
+.quote-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+}
+
+.quote-text {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #229954;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Форма лайка */
+.like-form {
+    margin: 20px 0;
+}
+
+/* Отладочная информация */
+.debug-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .quote-container {
+        padding: 20px;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

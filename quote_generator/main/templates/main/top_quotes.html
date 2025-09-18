@@ -1,0 +1,37 @@
+<!-- templates/top_quotes.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Топ цитат</title>
+    <style>
+        .quote-item {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .likes {
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Самые популярные цитаты</h1>
+    
+    {% if quotes %}
+        <div class="quotes-list">
+            {% for quote in quotes %}
+                <div class="quote-item">
+                    <p>{{ quote.quote }}</p>
+                    <div class="likes">
+                        Лайки: {{ quote.likes_count }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Цитат пока нет</p>
+    {% endif %}
+</body>
+</html>

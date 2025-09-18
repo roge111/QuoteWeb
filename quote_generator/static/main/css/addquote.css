@@ -1,0 +1,134 @@
+/* addquote.css */
+body {
+    font-family: 'Georgia', serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #faf3e0;
+}
+
+.form-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e1e1e1;
+}
+
+h2 {
+    color: #8b4513;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: normal;
+}
+
+/* Сообщения */
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+.message.error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ffcccc;
+}
+
+/* Форма */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5d4037;
+    font-size: 1.1em;
+}
+
+.form-group textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group textarea:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #8d6e63;
+    box-shadow: 0 0 8px rgba(141, 110, 99, 0.3);
+}
+
+/* Кнопки */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #8d6e63;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #6d4c41;
+}
+
+.btn-secondary {
+    background-color: #a1887f;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #8d6e63;
+}
+
+.links {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.links a {
+    color: #8d6e63;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
